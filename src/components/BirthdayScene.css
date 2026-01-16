@@ -4,15 +4,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-bottom: 60px;
 
-    background: url('../../public/bg-birthday.png') no-repeat center center;
+    background: url('/bg-birthday.png') no-repeat center center;
     background-size: contain;
     background-color: #FFF0F5;
     /* màu nền bù */
 
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .pennant-banners {
@@ -127,6 +128,15 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+    .birthday-scene {
+        padding-bottom: 80px;
+    }
+
+    .birthday-content {
+        transform: translateY(60px);
+        padding: var(--spacing-md);
+    }
+
     .pennant-banners {
         top: 30px;
     }
@@ -144,8 +154,13 @@
         font-size: 1.8rem;
     }
 
+    .avatar-container {
+        transform: translateY(-50px);
+    }
+
     .letter-button {
         font-size: 1.2rem;
         padding: var(--spacing-sm) var(--spacing-lg);
+        margin-bottom: var(--spacing-xl);
     }
 }
