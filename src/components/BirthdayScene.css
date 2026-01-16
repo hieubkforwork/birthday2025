@@ -1,0 +1,151 @@
+/* Premium Birthday Scene */
+.birthday-scene {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: url('../assets/bg-birthday.png') no-repeat center center;
+    background-size: contain;
+    background-color: #FFF0F5;
+    /* màu nền bù */
+
+    position: relative;
+    overflow: hidden;
+}
+
+.pennant-banners {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.banner-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.birthday-content {
+    text-align: center;
+    z-index: 10;
+    padding: var(--spacing-lg);
+    transform: translateY(120px);
+
+}
+
+.avatar-container {
+    margin-bottom: var(--spacing-xl);
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid white;
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: gentle-pulse 2s infinite ease-in-out;
+}
+
+@keyframes gentle-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 32px rgba(255, 84, 112, 0.4);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 32px rgba(255, 84, 112, 0.7);
+    }
+}
+
+.avatar-placeholder {
+    font-size: 80px;
+}
+
+.birthday-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--accent-neon);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    margin-bottom: var(--spacing-xl);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.birthday-title br {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.letter-button {
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+    animation: gentle-bounce 2s infinite ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: var(--spacing-xl);
+}
+
+@keyframes gentle-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.letter-button:hover {
+    background: linear-gradient(45deg, #FF1493, #FF69B4);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .pennant-banners {
+        top: 30px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .avatar-placeholder {
+        font-size: 60px;
+    }
+
+    .birthday-title {
+        font-size: 1.8rem;
+    }
+
+    .letter-button {
+        font-size: 1.2rem;
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+}

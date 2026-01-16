@@ -1,0 +1,75 @@
+:root {
+  /* Color Palette - Bright Pink Theme */
+  --bg-deep: #fff0f5;
+  /* Lavender Blush */
+  --bg-gradient: linear-gradient(135deg, #fff0f5 0%, #ffc1e3 100%);
+  /* Nearly transparent overlay */
+
+  --text-primary: #5c3a4d;
+  --text-secondary: #8c6a7d;
+
+  --accent-gold: #FFD700;
+  --accent-neon: #FF69B4;
+  --accent-glow: rgba(255, 105, 180, 0.4);
+
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.8);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Shadows & Glows */
+  --shadow-sm: 0 4px 12px rgba(255, 182, 193, 0.3);
+  --shadow-lg: 0 10px 40px rgba(255, 105, 180, 0.2);
+  --glow-text: 0 0 5px rgba(255, 105, 180, 0.3);
+  --glow-box: 0 0 20px rgba(255, 182, 193, 0.5);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Glassmorphism */
+  --glass-blur: blur(12px);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-heading);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Accessibility - Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

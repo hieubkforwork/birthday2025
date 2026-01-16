@@ -1,0 +1,185 @@
+.cake-scene {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--pink-pastel), var(--purple-light));
+    padding: var(--spacing-lg);
+    animation: fadeIn 0.5s ease;
+    position: relative;
+}
+
+/* Add stars background effect via pseudo-element */
+.cake-scene::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(#FF69B4, rgba(255, 105, 180, .2) 2px, transparent 3px),
+        radial-gradient(#FF1493, rgba(255, 20, 147, .15) 1px, transparent 2px);
+    background-size: 550px 550px, 350px 350px;
+    background-position: 0 0, 40px 60px;
+    opacity: 0.1;
+    animation: float 60s linear infinite;
+    pointer-events: none;
+}
+
+.permission-prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.permission-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-lg);
+    color: var(--text-primary);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.permission-card h2 {
+    color: var(--accent-neon);
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-md);
+}
+
+.permission-card p {
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    margin-bottom: var(--spacing-md);
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.9rem;
+}
+
+.permission-button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.permission-button:hover {
+    background: linear-gradient(45deg, #FF1493, #FF69B4);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.instructions {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.9);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.instruction-text {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #FF1493, #FF69B4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.candle-count {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: var(--spacing-sm);
+}
+
+.volume-indicator {
+    width: 100%;
+    max-width: 300px;
+    height: 10px;
+    background: #E0E0E0;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.volume-bar {
+    height: 100%;
+    background: linear-gradient(to right, var(--accent-heart), #FF3355);
+    transition: width 0.1s ease;
+    border-radius: var(--radius-full);
+}
+
+/* Premium Cake Design - CSS Only */
+.cake-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    perspective: 1000px;
+    margin-top: var(--spacing-xl);
+}
+
+.plate {
+    position: absolute;
+    bottom: 0;
+    width: 380px;
+    height: 140px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.05) 70%, transparent 100%);
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: rotateX(60deg);
+    z-index: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Image Cake Styles */
+.cake-image {
+    pointer-events: none;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+    .cake-container {
+        transform: scale(0.9);
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cake-container {
+        max-width: 280px;
+    }
+
+    .instructions {
+        padding: var(--spacing-md);
+    }
+}

@@ -1,0 +1,143 @@
+.letter-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+    padding: var(--spacing-md);
+}
+
+.letter-modal {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: fadeIn 0.5s ease;
+}
+
+.letter-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10001;
+    box-shadow: var(--shadow-md);
+}
+
+.letter-close:hover {
+    background: var(--accent-heart);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.letter-paper {
+    background: #FFFEF8;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    background-image:
+        linear-gradient(rgba(255, 84, 112, 0.03) 1px, transparent 1px);
+    background-size: 100% 30px;
+    position: relative;
+}
+
+.letter-header h2 {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    color: var(--accent-heart);
+    margin-bottom: var(--spacing-lg);
+}
+
+.letter-body {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.letter-paragraph {
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.letter-paragraph.typing {
+    min-height: 2em;
+}
+
+.typing-cursor {
+    animation: blink-caret 0.75s step-end infinite;
+    color: var(--accent-heart);
+    font-weight: bold;
+}
+
+.letter-signature {
+    text-align: right;
+    margin-top: var(--spacing-xl);
+    font-size: 1.6rem;
+    color: var(--accent-heart);
+    font-weight: bold;
+}
+
+.skip-typing-btn {
+    position: absolute;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--accent-heart);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-heading);
+    opacity: 0.8;
+}
+
+.skip-typing-btn:hover {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .letter-modal {
+        max-height: 85vh;
+    }
+
+    .letter-paper {
+        padding: var(--spacing-lg);
+    }
+
+    .letter-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .letter-body {
+        font-size: 1.2rem;
+    }
+
+    .letter-signature {
+        font-size: 1.3rem;
+    }
+
+    .letter-close {
+        top: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+}

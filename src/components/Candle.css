@@ -1,0 +1,88 @@
+.candle-container {
+    width: 20px;
+    height: 80px;
+    /* Keeping original height as new one was malformed */
+    z-index: 10;
+}
+
+.candle-stick {
+    width: 13px;
+    height: 45px;
+    background: repeating-linear-gradient(45deg,
+            #FFD700,
+            #FFD700 5px,
+            #FFF 5px,
+            #FFF 10px);
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.candle-stick::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 6px;
+    background: #333;
+}
+
+.flame-container {
+    position: absolute;
+    top: -27px;
+    left: 50%;
+    transform: translateX(-75%);
+}
+
+.flame {
+    width: 15px;
+    height: 25px;
+    background: linear-gradient(to top, #FF6B00, #FFD700, #FFF8DC);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 0.3s infinite alternate, glow 1s infinite alternate;
+    position: relative;
+}
+
+.flame-inner {
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 12px;
+    background: linear-gradient(to top, #FFD700, #FFF8DC);
+    border-radius: 50%;
+    animation: flicker 0.15s infinite alternate;
+}
+
+.smoke {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 50%;
+    animation: smokePuff 1s ease-out forwards;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .candle-container {
+        width: 15px;
+        height: 45px;
+    }
+
+    .candle-stick {
+        width: 15px;
+        height: 35px;
+    }
+
+    .flame {
+        width: 12px;
+        height: 20px;
+    }
+}
