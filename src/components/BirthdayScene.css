@@ -34,7 +34,7 @@
     text-align: center;
     z-index: 10;
     padding: var(--spacing-lg);
-    transform: translateY(120px);
+    transform: translateY(220px);
 
 }
 
@@ -130,6 +130,7 @@
 @media (max-width: 768px) {
     .birthday-scene {
         padding-bottom: 80px;
+        background-image: none;
     }
 
     .birthday-content {
@@ -154,9 +155,7 @@
         font-size: 1.8rem;
     }
 
-    .avatar-container {
-        transform: translateY(-50px);
-    }
+
 
     .letter-button {
         font-size: 1.2rem;
