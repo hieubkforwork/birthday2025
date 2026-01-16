@@ -80,7 +80,7 @@ function CakeScene({ onAllCandlesBlown }) {
 
                         {/* Image Cake */}
                         <img
-                            src="../../public/cake.png"
+                            src="/cake.png"
                             alt="Birthday Cake"
                             className="cake-image"
                             style={{

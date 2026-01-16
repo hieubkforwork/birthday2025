@@ -70,7 +70,7 @@ const CORRECT_PASSWORD = 'happybirthday'; // Đổi mật khẩu tại đây
 
 ```jsx
 <div className="avatar">
-  <img src="/src/assets/images/avatar.jpg" alt="Avatar" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+  <img src="/avatar.jpg" alt="Avatar" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
 </div>
 ```
 
