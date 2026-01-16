@@ -3,7 +3,7 @@ import LetterModal from './LetterModal';
 import Fireworks from './Fireworks';
 import FloatingHearts from './FloatingHearts';
 import Confetti from './Confetti';
-import avatarImg from '../assets/avatar.jpg';
+import avatarImg from '../../public/avatar.jpg';
 import './BirthdayScene.css';
 
 function BirthdayScene() {

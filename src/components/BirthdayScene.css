@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 
-    background: url('../assets/bg-birthday.png') no-repeat center center;
+    background: url('../../public/bg-birthday.png') no-repeat center center;
     background-size: contain;
     background-color: #FFF0F5;
     /* màu nền bù */

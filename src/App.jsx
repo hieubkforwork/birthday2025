@@ -12,7 +12,7 @@ const CORRECT_PASSWORD = '24102025';
 
 // Note: Add your happy-birthday.mp3 file to src/assets/
 // Using a placeholder path - will work once file is added
-const MUSIC_PATH = '/src/assets/happy-birthday.mp3';
+const MUSIC_PATH = '../../public/happy-birthday.mp3';
 
 function App() {
   const [currentScene, setCurrentScene] = useState('password'); // 'password', 'cake', 'birthday'
